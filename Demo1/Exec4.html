@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta chrset="UTF 8">
+    <title>KGiSL</title>
+</head>
+
+<body ng-app="DemoApp">
+
+    <h1> Demo for Angular</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+    <div ng-controller="DemoController">
+        {{fullName("John","Doe")}}
+    </div>
+
+    <script type="text/javascript">
+
+        var app = angular.module("DemoApp", []);
+        app.controller("DemoController", function ($scope) {
+
+            $scope.fullName = function (firstName, lastname) {
+                return firstName + " " + lastname;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGiSL</title>
+</head>
+
+<body>
+    <h1>Demo for angular</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+
+    <div ng-app="DemoApp" ng-controller="DemoController">
+        Tutorial Name : <input type="text" ng-model="tutorialName"><br>
+        This tutorial is {{tutorialName}}
+    </div>
+
+    <script>
+        var app = angular.module('DemoApp', []);
+        app.controller('DemoController', function ($scope) {
+            $scope.tutorialName = "Servlet";
+
+            // $scope.tname = function (tutorialName) {
+            //     return tutorialName;
+            // }
+
+        });
+    </script>
+</body>
+
+</html>
